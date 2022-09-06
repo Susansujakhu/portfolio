@@ -1,5 +1,18 @@
+setup:
+  addons:
+    - plan: heroku-postgresql
+      as: DATABASE
+  config:
+    MY_VAR: my value
+    MY_VAR_2: another value
 build:
   docker:
-    web: Dockerfile
-run:
-  web: bundle exec puma -C config/puma.rb
+    web: web/Dockerfile
+    worker: worker1/Dockerfile
+    worker: worker2/Dockerfile
+# release:
+  # copy resources
+  # skip in this example
+# run:
+  # startup script
+  # skip in this example
