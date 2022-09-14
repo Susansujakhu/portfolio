@@ -397,7 +397,7 @@
           
           {% for work in works %}
               <div class="resume-item">
-                <h4>{{ work.company_name }}</h4>
+                <h4>{{ work.company }}</h4>
                 <h5>{{ work.start_date|date:"Y" }} - {{work.end_date|date:"Y"|default:"Present"}}</h5>
                 <p><em>{{ work.position }}</em></p>
                 {% comment %} <p>{{work.project_description|linebreaksbr}}</p> {% endcomment %}
