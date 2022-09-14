@@ -96,7 +96,7 @@
             <div class="col-lg-6">
               {% now "Y" as current_year %}
               <ul>
-                <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>{{ user_detail.profile.phone|default:"+977-9866297369"}} }}</span></li>
+                <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>{{ user_detail.profile.phone|default:"+977-9866297369"}}</span></li>
                 <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span> <a href="mailto:{{user_detail.email}}"> {{user_detail.email|default:"sushansujakhu14@gmail.com"}}</a></span></li>
                 <li><i class="bi bi-chevron-right"></i> <strong>linkedIn:</strong> <span><a href="{{ user_detail.profile.linkedin }}">susan.sujakhu</a></span></li>
                 <li><i class="bi bi-chevron-right"></i> <strong>Status:</strong> <span>Available</span></li>
@@ -185,7 +185,7 @@
     </div><!-- End Skills -->
 
     <!-- ======= Interests ======= -->
-    <div class="interests container">
+    {% comment %} <div class="interests container">
 
       <div class="section-title">
         <h2>Interests</h2>
@@ -266,7 +266,8 @@
         </div>
       </div>
 
-    </div><!-- End Interests -->
+    </div> {% endcomment %}
+    <!-- End Interests -->
 
     <!-- ======= Testimonials ======= -->
 {% comment %} 
