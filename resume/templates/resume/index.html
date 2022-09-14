@@ -393,22 +393,20 @@
             </div>            
           {% endfor %}
             
-          <h3 class="resume-title">Projects</h3>
+          <h3 class="resume-title">Professional Experience</h3>
           
-          {% for project in projects %}
-            {% if project.work_place is null %}
+          {% for work in works %}
               <div class="resume-item">
-                <h4>{{ project.project_name }}</h4>
-                <h5>{{ project.start_date|date:"Y" }} - {{project.end_date|date:"Y"}}</h5>
-                <p><em>{{ education.college }}</em></p>
-                <p>{{project.project_description|linebreaksbr}}</p>
-              </div>            
-            {% endif %}
+                <h4>{{ work.company_name }}</h4>
+                <h5>{{ work.start_date|date:"Y" }} - {{work.end_date|date:"Y"|default:"Present"}}</h5>
+                <p><em>{{ work.position }}</em></p>
+                {% comment %} <p>{{work.project_description|linebreaksbr}}</p> {% endcomment %}
+              </div>        
           {% endfor %}
 
         </div>
         <div class="col-lg-6">
-          <h3 class="resume-title">Professional Experience</h3>
+          <h3 class="resume-title">Projects</h3>
           
           {% for project in projects %}
             
