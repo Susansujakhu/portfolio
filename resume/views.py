@@ -12,7 +12,7 @@ from django.urls import reverse
 def index(request):
     user_detail = User.objects.get(username = 'susansujakhu')
     educations = Education.objects.filter(user_name_id = user_detail.id)
-    works = WorkHistory.objects.filter(user_name_id = user_detail.id)
+    works = WorkHistory.objects.filter(user_name_id = user_detail.id).order_by('-start_date')
     projects = Project.objects.filter(user_name_id = user_detail.id).order_by('-start_date')
     training = Trainings.objects.filter(user_name_id = user_detail.id)
     skills = Skill.objects.filter(user_name_id = user_detail.id).order_by('priority')
