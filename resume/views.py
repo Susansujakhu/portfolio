@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
+from resume.models import Downloads
 from users.forms import ContactForm
 from users.models import Education, WorkHistory, Project, Trainings, Skill
 from django.contrib import messages
@@ -42,3 +43,10 @@ def index(request):
         return redirect(reverse('resume:index') + '#contact')
 
     return render(request, 'resume/index.html', context)
+
+def downloads(request):
+    file_lists = Downloads.objects.all().order_by('type')
+    context = {
+        'lists' : file_lists,
+    }
+    return render(request, 'resume/downloads.html', context)
