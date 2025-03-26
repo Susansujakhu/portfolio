@@ -11,8 +11,8 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  {% comment %} <link href="{% static 'resume/img/favicon.png' %}" rel="icon"> {% endcomment %}
-  <link href="{% static 'resume/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+  <link href="pictures/{{user_detail.profile.profile_picture}}" rel="icon"> 
+  <link href="pictures/{{user_detail.profile.profile_picture}}" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
@@ -54,10 +54,11 @@
       </nav><!-- .navbar -->
 
       <div class="social-links">
-        <a href="https://twitter.com/sujakhu_sushan" class="twitter"><i class="bi bi-twitter"></i></a>
-        <a href="https://www.facebook.com/sus.shawn.14/" class="facebook"><i class="bi bi-facebook"></i></a>
-        <a href="https://www.instagram.com/sujakhusushan/" class="instagram"><i class="bi bi-instagram"></i></a>
-        <a href="https://www.linkedin.com/in/susan-sujakhu-b1331a1b6/" class="linkedin"><i class="bi bi-linkedin"></i></a>
+        <a href="https://twitter.com/sujakhu_sushan" target="_blank" class="twitter"><i class="bi bi-twitter"></i></a>
+        <a href="https://www.facebook.com/sus.shawn.14/" target="_blank" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="https://www.instagram.com/sujakhusushan/" target="_blank" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/susan-sujakhu-b1331a1b6/" target="_blank" class="linkedin"><i class="bi bi-linkedin"></i></a>
+        <a href="https://github.com/Susansujakhu" target="_blank" class="github"><i class="bi bi-github"></i></a>
       </div>
 
     </div>
@@ -76,7 +77,7 @@
 
       <div class="row">
         <div class="col-lg-4" data-aos="fade-right">
-          <img src="assets/img/me.jpg" class="img-fluid" alt="">
+          <img src="pictures/{{user_detail.profile.profile_picture}}" class="img-fluid" alt="">
         </div>
         <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
           <h3>Python Developer &amp; Software Engineer</h3>
@@ -97,9 +98,9 @@
               {% now "Y" as current_year %}
               <ul>
                 <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>{{ user_detail.profile.phone|default:"+977-9866297369"}}</span></li>
-                <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span> <a href="mailto:{{user_detail.email}}"> {{user_detail.email|default:"sushansujakhu14@gmail.com"}}</a></span></li>
-                <li><i class="bi bi-chevron-right"></i> <strong>linkedIn:</strong> <span><a href="{{ user_detail.profile.linkedin }}">susan.sujakhu</a></span></li>
-                <li><i class="bi bi-chevron-right"></i> <strong>Status:</strong> <span>Available</span></li>
+                <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span> <a href="mailto:{{user_detail.email}}" target="_blank"> {{user_detail.email|default:"sushansujakhu14@gmail.com"}}</a></span></li>
+                <li><i class="bi bi-chevron-right"></i> <strong>linkedIn:</strong> <span><a href="{{ user_detail.profile.linkedin }}" target="_blank">susan.sujakhu</a></span></li>
+                <li><i class="bi bi-chevron-right"></i> <strong>GitHub:</strong> <span><a href="{{ user_detail.profile.git }}" target="_blank">Susansujakhu</a></span></li>
               </ul>
             </div>
           </div>
